@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Books tracking</h1>
+        <button command="show-modal" commandfor="my-dialog" id="add"> +add a book</button>
+
+        <dialog id="my-dialog">
+            <p>Add a book to your list.</p>
+            <form>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+
+                <label for="pages">Number Of Pages</label>
+                <input type="number" min="2" name="pages" id="pages">
+
+                <div id="radioHead">
+                    <label for="read">Read</label>
+                    <input type="checkbox" name="read" id="read" value="Read" checked>
+                </div>
+
+                <button type="submit" class="submit">Submit</button>
+            </form>
+            <button commandfor="my-dialog" command="close">Close</button>
+        </dialog>
+
+    </header>
+    <div class="container"></div>
+
+
+
+    <svg class="book-stack" viewBox="0 0 320 230" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Bottom book -->
+        <path d="M28 166 Q35 154 55 156 L218 165 Q230 166 230 175
+    L224 188 Q220 195 205 192 L42 183 Q22 181 28 166Z" fill="#002642" />
+
+        <path d="M31 163 Q38 154 55 157 L218 165
+    Q228 166 227 173 L219 181 L43 172Z" fill="#d8dae5" />
+
+        <path d="M44 157 L211 165 L219 174 L44 166Z" fill="#0026426e" />
+
+        <!-- Middle book -->
+        <path d="M42 140 Q42 132 55 131 L215 124
+    Q228 125 230 133 L222 150 Q219 155 205 154
+    L49 160 Q34 158 42 140Z" fill="#002642" />
+
+        <path d="M42 138 Q44 131 57 131 L215 124
+    Q226 124 229 132 L221 143 L48 151Z" fill="#d8dae5" />
+
+        <path d="M48 151 L221 143 L222 150
+    L205 154 L49 160Z" fill="#0026426e" />
+
+        <!-- Top book -->
+        <path d="M55 109 Q57 100 70 100 L204 106
+    Q218 107 220 115 L211 129 Q207 135 194 133
+    L62 126 Q48 124 55 109Z" fill="#0026426e" />
+
+        <path d="M55 109 Q57 100 70 100 L204 106
+    Q218 107 220 115 L211 122 L62 117Z" fill="#d8dae5" />
+
+        <path d="M62 117 L211 122 L211 129
+    Q207 135 194 133 L62 126Z" fill="#002642" />
+
+        <!-- Brown book details -->
+        <path d="M76 102 L80 110 L79 120
+             M190 106 L187 116
+             M60 158 L60 171
+             M199 165 L196 177" fill="none" stroke="#a52a2a" stroke-width="2.5" stroke-linecap="round" />
+
+        <!-- Flower -->
+        <g transform="translate(48 72)">
+            <ellipse cx="0" cy="-9" rx="5" ry="9" fill="#a52a2a" />
+            <ellipse cx="9" cy="0" rx="5" ry="9" transform="rotate(90 9 0)" fill="#d8dae5" />
+            <ellipse cx="0" cy="9" rx="5" ry="9" fill="#a52a2a" />
+            <ellipse cx="-9" cy="0" rx="5" ry="9" transform="rotate(90 -9 0)" fill="#d8dae5" />
+            <circle cx="0" cy="0" r="4" fill="#002642" />
+        </g>
+
+        <!-- Leafy branch -->
+        <g fill="none" stroke="#a52a2a" stroke-width="2" stroke-linecap="round">
+
+            <path d="M253 185 Q276 135 292 62" />
+
+            <path d="M267 150 Q240 142 240 125
+                 Q259 126 267 150Z" fill="#d8dae5" />
+
+            <path d="M271 133 Q295 130 299 111
+                 Q280 111 271 133Z" fill="#0026426e" />
+
+            <path d="M279 105 Q254 99 256 81
+                 Q275 83 279 105Z" fill="#d8dae5" />
+
+            <path d="M284 87 Q305 83 307 65
+                 Q289 68 284 87Z" fill="#0026426e" />
+
+            <path d="M289 66 Q273 53 280 39
+                 Q295 46 289 66Z" fill="#a52a2a" />
+        </g>
+
+        <!-- Small decorative details -->
+        <path d="M22 205 Q130 214 246 198" stroke="#a52a2a" stroke-width="1.5" fill="none" opacity="0.6" />
+
+    </svg>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
