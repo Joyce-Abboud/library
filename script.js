@@ -4,7 +4,7 @@ const submit = document.querySelector(".submit");
 const form = document.querySelector("form");
 const dialog = document.querySelector("dialog");
 
-
+//library arr
 const myLibrary = [
     {
         title: "My Stroke of Insight",
@@ -15,14 +15,15 @@ const myLibrary = [
     }
 ];
 
-
-function Book(title, author, pages, read, id) {
-    // the constructor...
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = id;
+//book constructor
+class Book {
+    constructor(title, author, pages, read, id) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = id;
+    }
 }
 
 function addBookToLibrary(title, author, pages, read) {
